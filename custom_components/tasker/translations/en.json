@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose a name for the Tasker instance",
+        "description": "A description",
+        "data": {
+          "name": "Name",
+          "host": "Host",
+          "port": "Port",
+          "authentication": "Authorize API requests",
+          "scan_interval": "Scan Interval"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthorize Tasker",
+        "description": "Click submit and accept the auth request on your phone."
+      }
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "auth_error": "Error authorizing Tasker",
+      "connection_error": "Error connecting to Tasker",
+      "uid_error": "Error getting unique id",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]",
+      "reauth_unsuccessful": "Re-authentication was unsuccessful, please check Tasker."
+      
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tasker options",
+        "description": "All settings for a Tasker component.",
+        "data": {
+          "structure_globals": "Structure Global Variable Outputs",
+          "variables": "Builtin Global Variables",
+          "command": "Track Tasker commands",
+          "scan_interval": "Scan Interval"
+        },
+        "data_description": {
+          "variables": "Add these variables as text entities",
+          "structure_globals": "If the output is either JSON, HTML, XML, or CSV, enable this option so that you can easily read its contents via the value_json attribute.",
+          "command": "Disable if you aren't tracking commands in Tasker",
+          "scan_interval": "Poll Tasker at this rate"
+        }
+      }
+    }
+  },
+  "device_automation": {
+    "trigger_type": {
+      "tasker_command": "Tasker command received"
+    }
+  }
+}

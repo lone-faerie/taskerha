@@ -1,0 +1,79 @@
+perform_task:
+  name: Perform Task
+  description: "Run the selected Tasker task. If the task does a Return action, the last_return attribute of the selected task's entity is set to the Value specified in that Return action."
+  target:
+    entity:
+      integration: tasker
+      domain: binary_sensor
+  fields:
+    par1:
+      name: "Parameter 1 (%par1)"
+      description: "Values assigned to %par1 and %par2 are available in the selected task as normal variables."
+      selector:
+        text:
+    par2:
+      name: "Parameter 2 (%par2)"
+      description: "Values assigned to %par1 and %par2 are available in the selected task as normal variables."
+      selector:
+        text:
+    variables:
+      name: "Local Variable Passthrough"
+      description: "Variables to forward to the task as local variables. Do not include a leading '%'"
+      selector:
+        object:
+    structure_output:
+      name: "Structure Output"
+      description: "If the return value is either JSON or XML, enable this option so you can easily read its contents in the last_return attribute of the selected task's entity."
+      required: true
+      default: true
+      selector:
+        boolean:
+        
+import_task:
+  name: Import Task
+  description: "Import a task into Tasker"
+  target:
+    entity:
+      integration: tasker
+      domain: sensor
+  fields:
+    xml:
+      name: "Task XML Data"
+      description: "Data for the task being imported"
+      required: true
+      selector:
+        text:
+          multiline: true
+    name:
+      name: "Name"
+      description: "Rename the task before importing"
+      selector:
+        text:
+          
+backup:
+  name: Data Backup
+  description: "Backup your Tasker data to a local file and optionally to Google Drive."
+  target:
+    entity:
+      integration: tasker
+      domain: sensor
+  fields:
+    username:
+      name: "Google Drive Account"
+      description: "If you set this account, a file will be created in your backup folder on Google Drive."
+      selector:
+        text:
+        
+send_command:
+  name: Send Command
+  description: "Allows you trigger the Command event and other actions in Tasker that allow you to send commands, allowing to use the Tasker Command System to trigger tasks in a flexible and extensible way."
+  target:
+    entity:
+      integration: tasker
+      domain: sensor
+  fields:
+    command:
+      name: "Command"
+      required: true
+      selector:
+        text:

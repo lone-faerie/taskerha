@@ -1,0 +1,30 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose a name for the Tasker instance",
+        "description": "A description",
+        "data": {
+          "name": "Name",
+          "host": "Host",
+          "port": "Port",
+          "scan_interval": "Scan Interval"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tasker options",
+        "description": "All settings for a Tasker component.",
+        "data": {
+            "scan_interval": "Scan Interval"
+        }
+      }
+    }
+  }
+}

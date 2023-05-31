@@ -1,0 +1,11 @@
+{
+  "domain": "tasker",
+  "name": "Tasker",
+  "codeowners": ["@lone-faerie"],
+  "config_flow": true,
+  "dependencies": ["http"],
+  "documentation": "https://github.com/lone-faerie/taskerha/",
+  "iot_class": "local_poll",
+  "requirements": ["xmltodict"],
+  "version": "0.1.0"
+}
