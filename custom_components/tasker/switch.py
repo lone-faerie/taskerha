@@ -7,12 +7,12 @@ from homeassistant.const import (
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .taskerapi.const import (
+from taskerapi.const import (
     ATTR_PROFILES,
     ATTR_ENABLED,
     ATTR_ACTIVE,
 )
-from .taskerapi.typing import TaskerProfile
+from taskerapi.typing import TaskerProfile
 
 from . import TaskerEntity
 from .const import (

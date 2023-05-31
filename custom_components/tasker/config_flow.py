@@ -30,13 +30,13 @@ from homeassistant.helpers.selector import (
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.device_registry import format_mac
 
-from .taskerapi import TaskerClient, tasks
-from .taskerapi.const import (
+from taskerapi import TaskerClient, tasks
+from taskerapi.const import (
     ATTR_ANDROID_ID,
     BUILTIN_GLOBALS,
     TASK_DEVICE_INFO,
 )
-from .taskerapi.exceptions import TaskerAuthError
+from taskerapi.exceptions import TaskerAuthError
 
 #from . import async_tasker_device
 from .const import (

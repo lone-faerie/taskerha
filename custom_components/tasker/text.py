@@ -1,6 +1,5 @@
 """Support for Tasker globals"""
 import logging
-from xmltodict import parse as xml_parse
 
 from homeassistant.components.text import TextEntity
 from homeassistant.config_entries import ConfigEntry
@@ -12,7 +11,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.json import json_dumps
 from homeassistant.util.json import JsonArrayType, JsonObjectType
 
-from .taskerapi.const import (
+from taskerapi.const import (
     ATTR_GLOBALS,
     ATTR_VALUE,
     BUILTIN_GLOBALS,

@@ -25,7 +25,7 @@ from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
 )
 
-from .taskerapi.const import (
+from taskerapi.const import (
     ATTR_PROFILES,
     ATTR_TASKS,
     ATTR_SCENES,
@@ -34,7 +34,7 @@ from .taskerapi.const import (
     ATTR_PAR1,
     TASK_BACKUP
 )
-from .taskerapi.tasks import (
+from taskerapi.tasks import (
     async_backup
 )
 

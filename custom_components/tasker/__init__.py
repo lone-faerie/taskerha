@@ -45,8 +45,8 @@ from homeassistant.helpers.update_coordinator import (
     UpdateFailed,
 )
 
-from .taskerapi import TaskerClient, tasks
-from .taskerapi.const import (
+from taskerapi import TaskerClient, tasks
+from taskerapi.const import (
     ATTR_ANDROID_ID,
     ATTR_MAC_ADDRESS,
     ATTR_ACTIVE,
@@ -57,8 +57,8 @@ from .taskerapi.const import (
     ATTR_GLOBALS,
     TASK_DEVICE_INFO,
 )
-from .taskerapi.exceptions import TaskerAuthError
-from .taskerapi.typing import (
+from taskerapi.exceptions import TaskerAuthError
+from taskerapi.typing import (
     TaskerStats,
     TaskerProfile,
     TaskerTask,

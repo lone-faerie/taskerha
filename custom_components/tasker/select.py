@@ -9,7 +9,7 @@ from homeassistant.const import (
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .taskerapi.const import (
+from taskerapi.const import (
     ATTR_SCENES,
     ATTR_STATUS,
     ATTR_DISPLAY_AS,
