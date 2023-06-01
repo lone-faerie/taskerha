@@ -17,7 +17,7 @@ The [TaskerHA integration](https://github.com/lone-faerie/taskerha/) allows you 
 
 ## How to use it
 ### Installation & Setup
-1. Import and setup the accompanying [HTTP API Tasker project](https://taskernet.com)
+1. Import and setup the accompanying [HTTP API Tasker project](https://taskernet.com/shares/?user=AS35m8kgT7%2Fg4ls8ijzQzKetgy0bfSM3ifU47We%2BDxSEZ7%2FmVpu2beWrD%2FErLXwjCiPkbdRz&id=Project%3ATasker+HTTP+API)
 2. Add repository to HACS. HACS > Integrations > Custom Repositories
 3. Add Integration in Home Assistant. Settings > Devices & Services > Add Integration
 4. Follow the instructions on screen to complete the setup.
