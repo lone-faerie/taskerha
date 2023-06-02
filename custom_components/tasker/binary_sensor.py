@@ -131,14 +131,10 @@ class TaskerTaskBinarySensor(TaskerEntity, BinarySensorEntity):
         variables: dict[str, Any] = {},
         structure_output: bool = True,
     ) -> None:
-        template_vars: dict[str, str] = {}
         if par1:
-            template_vars[ATTR_PAR1] = par1
+            variables.setdefault(ATTR_PAR1, par1)
         if par2:
-            template_vars[ATTR_PAR2] = par2
-       # for k, v in variables.items():
-           # _LOGGER.warning(v)
-            #variables[k] = template.render_complex(v, template_vars)
+            variables.setdefault(ATTR_PAR2, par2)
         resp = await self.coordinator.client.async_perform_task(
             self.name,
             structure_output,
